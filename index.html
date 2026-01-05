@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Annie ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#ffccd5,#ffb3a7);
+  color:#4a1c2a;
+}
+
+/* NAVBAR */
+nav{
+  background:rgba(255,255,255,0.95);
+  padding:15px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+nav img{
+  height:40px;
+}
+nav a{
+  text-decoration:none;
+  margin-left:25px;
+  color:#4a1c2a;
+  font-weight:500;
+}
+nav a:hover{color:#ff4d6d}
+
+/* HOME */
+.home{
+  display:flex;
+  flex-wrap:wrap;
+  padding:80px 60px;
+  align-items:center;
+}
+.letter{
+  flex:1;
+  min-width:320px;
+  padding-right:40px;
+}
+.letter h1{
+  font-family:'Playfair Display',serif;
+  font-size:3em;
+}
+.letter p{
+  font-size:1.1em;
+  line-height:1.9;
+}
+.photo{
+  flex:1;
+  text-align:center;
+}
+.photo img{
+  max-width:320px;
+  border-radius:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+/* COUNTER */
+#counter{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:white;
+  padding:15px 25px;
+  border-radius:30px;
+  font-size:.9em;
+  box-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <img src="logo.png" alt="Logo">
+  <div>
+    <a href="index.html">Home</a>
+    <a href="trips.html">Trips</a>
+  </div>
+</nav>
+
+<!-- HOME CONTENT -->
+<div class="home">
+  <div class="letter">
+    <h1>My dear Annie ❤️</h1>
+    <p>
+      I was thinking of doing something romantic, and then I realised —  
+      God has already gifted me the most precious gift of this century.  
+      <b>You.</b>
+      <br><br>
+      My love, my moonbeam, my Annie.
+      <br><br>
+      Whenever I am with you, I forget the world, I forget the stress,  
+      I forget everything. I remember only one thing —  
+      how lucky I am to have you.
+      <br><br>
+      You always tell me, “Babe, do something productive.”
+      <br><br>
+      So here I am, babe.  
+      I made this page for us — something only we can access.
+      <br><br>
+      Look at the bottom…  
+      you’ll see the exact timer since the day we first met.
+      <br><br>
+      Jaana, I don’t want anything from life except your stand by my side.
+      <br><br>
+      I know you miss me a lot… don’t cry now 😘  
+      my mistake — I miss you even more.
+      <br><br>
+      Come here, let me kiss you first…  
+      now look at the page again.
+      <br><br>
+      I made it only for you ☺️❤️💕
+    </p>
+  </div>
+
+  <div class="photo">
+    <img src="us-main.jpg" alt="Us">
+  </div>
+</div>
+
+<!-- COUNTER -->
+<div id="counter"></div>
+
+<script>
+const start = new Date("December 2, 2025 17:30:00").getTime();
+setInterval(()=>{
+  const now = new Date().getTime();
+  const diff = now - start;
+
+  const d = Math.floor(diff/(1000*60*60*24));
+  const h = Math.floor((diff/(1000*60*60))%24);
+  const m = Math.floor((diff/(1000*60))%60);
+
+  document.getElementById("counter").innerHTML =
+    `Together since ❤️<br>${d} days ${h} hrs ${m} mins`;
+},1000);
+</script>
+
+</body>
+</html>
 

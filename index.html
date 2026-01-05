@@ -16,6 +16,45 @@ body{
 }
 
 /* NAVBAR */
+  .menu{
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+.dropdown{
+  position:relative;
+}
+
+.dropdown span{
+  cursor:pointer;
+}
+
+.dropdown-content{
+  display:none;
+  position:absolute;
+  top:30px;
+  background:white;
+  border-radius:10px;
+  box-shadow:0 5px 20px rgba(0,0,0,.25);
+  overflow:hidden;
+}
+
+.dropdown-content a{
+  display:block;
+  padding:10px 20px;
+  text-decoration:none;
+  color:#4a1c2a;
+}
+
+.dropdown-content a:hover{
+  background:#ffe0e9;
+}
+
+.dropdown:hover .dropdown-content{
+  display:block;
+}
+
 nav{
   background:rgba(255,255,255,0.95);
   padding:15px 40px;
@@ -83,10 +122,18 @@ nav a:hover{color:#ff4d6d}
 <!-- NAV -->
 <nav>
   <img src="logo.png" alt="Logo">
-  <div>
-    <a href="index.html">Home</a>
-    <a href="trips.html">Trips</a>
+  <div class="menu">
+  <a href="index.html">Home</a>
+
+  <div class="dropdown">
+    <span>Trips ▾</span>
+    <div class="dropdown-content">
+      <a href="trips.html#shimla">Shimla</a>
+      <a href="trips.html#amritsar">Amritsar</a>
+    </div>
   </div>
+</div>
+
 </nav>
 
 <!-- HOME CONTENT -->
